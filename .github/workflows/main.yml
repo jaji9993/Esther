@@ -1,4 +1,4 @@
-name: ci
+NAMEname: ci
 
 on:
   push:
@@ -6,10 +6,10 @@ on:
       - "main"
 
 jobs:
-  build:
+  build: 
     runs-on: ubuntu-latest
     jobs:
-  build:
+  build: mvn clean install package
     runs-on: ubuntu-latest
     steps:
       -
@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_jaji9993 }}/clockbox:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
